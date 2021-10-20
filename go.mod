@@ -13,8 +13,7 @@ require (
 	github.com/google/gops v0.3.18
 	github.com/jinzhu/copier v0.3.2
 	github.com/klauspost/compress v1.13.5 // indirect
-	github.com/linkedin/goavro/v2 v2.10.0
-	github.com/mycujoo/go-kafka-avro/v2 v2.0.0
+	github.com/linkedin/goavro/v2 v2.10.0 // indirect
 	github.com/nacos-group/nacos-sdk-go v1.0.7
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/pkg/errors v0.9.1

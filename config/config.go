@@ -132,6 +132,7 @@ type TaskConfig struct {
 		Name       string
 		Type       string
 		SourceName string
+		TableName  string
 	} `json:"dims"`
 	// DynamicSchema will add columns present in message to clickhouse. Requires AutoSchema be true.
 	DynamicSchema struct {

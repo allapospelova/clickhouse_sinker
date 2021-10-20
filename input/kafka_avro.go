@@ -35,6 +35,13 @@ func NewKafkaAvro() *KafkaAvro {
 func (k *KafkaAvro) Init(cfg *config.Config, taskCfg *config.TaskConfig, putFn func(msg model.InputMessage), cleanupFn func()) (err error) {
 	k.cfg = cfg
 	k.taskCfg = taskCfg
+
+	for i, dim := range k.taskCfg.Dims {
+		if dim.TableName != "" {
+			k.taskCfg.Dims[i].Name = dim.TableName + "__" + dim.Name
+		}
+	}
+
 	k.stopped = make(chan struct{})
 	k.putFn = putFn
 	kfkCfg := &cfg.Kafka
